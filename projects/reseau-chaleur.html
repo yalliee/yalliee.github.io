@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simulation MATLAB d’un mini-réseau de chaleur : loi d’eau, plancher chauffant, dynamique thermique et appel de puissance.">
+    <title>Simulation d’un réseau de chaleur — Imran Fagbemi</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="../index.html" aria-label="Retour à l’accueil">IF<span>.</span></a>
+      <a class="header-focus" href="../index.html#contact">Stage EnR · 6 mois · février 2027</a>
+      <nav aria-label="Navigation principale"><a href="../index.html#a-propos">À propos</a><a href="../index.html#projets">Projets</a><a href="../index.html#parcours">Parcours</a><a href="../index.html#engagements">Engagements</a><a href="../index.html#contact">Contact</a></nav>
+      <a class="header-cta" href="../CV_Fagbemi_Imran_2027.pdf" target="_blank" rel="noreferrer">Voir mon CV <span aria-hidden="true">↗</span></a>
+    </header>
+    <main>
+      <section class="project-hero section-wrap">
+        <a class="back-link" href="../index.html#projets">← Retour aux projets</a>
+        <p class="eyebrow">Étude de réseau de chaleur · MATLAB</p>
+        <h1>Modélisation MATLAB d’un plancher chauffant <span>régulé par loi d’eau.</span></h1>
+        <p class="project-lead">Exercice de modélisation sous MATLAB : comment la météo parisienne, l’inertie de deux bâtiments et la régulation d’un plancher chauffant influencent-elles la puissance appelée&nbsp;?</p>
+        <figure class="project-image" id="photos">
+          <img src="../assets/puissance-reseau-chaleur.png" alt="Courbe annuelle de puissance thermique appelée par la simulation">
+          <figcaption>Puissance thermique appelée au cours de l’année simulée par le modèle de référence.</figcaption>
+        </figure>
+      </section>
+      <section class="section-wrap project-body">
+        <div class="project-main">
+          <section class="project-section">
+            <p class="eyebrow">Pourquoi cette modélisation ?</p>
+            <h2>Simuler la régulation du plancher chauffant et la puissance appelée</h2>
+            <p>Dans cet exercice, la production thermique alimente deux bâtiments par un réseau primaire et des planchers chauffants. La source de chaleur n’est pas imposée et les pertes dans les canalisations sont négligées : il s’agit d’un modèle pédagogique simplifié, pas du dimensionnement d’un réseau réel.</p>
+            <p>La question étudiée est celle de la demande : comment la météo de Paris, les caractéristiques thermiques des bâtiments et la loi d’eau influencent-elles les températures intérieures et les appels de puissance au fil de l’année&nbsp;?</p>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Démarche</p>
+            <h2>Simuler le fonctionnement thermique à pas horaire</h2>
+            <p>Le modèle MATLAB combine bilan thermique des bâtiments, inertie, apports, température extérieure, ventilation et plancher chauffant. Une loi d’eau ajuste la température de départ à la météo parisienne sur une année complète.</p>
+            <ul class="detail-list">
+              <li>Vérification de la convergence thermique et étude du refroidissement passif.</li>
+              <li>Analyse de sensibilité à l’inertie et aux déperditions des bâtiments.</li>
+              <li>Simulation des températures, des régimes hydrauliques et de la puissance appelée.</li>
+              <li>Comparaison de variantes de régulation thermostatique et d’inertie.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Résultat notable</p>
+            <h2>Le scénario de référence atteint un pic de 1,27 kW</h2>
+            <div class="result-banner"><strong>1,27 kW</strong><span>pic de puissance thermique appelé dans le scénario de référence</span></div>
+            <p>J’ai écrit les scripts MATLAB pour comparer l’inertie et les déperditions, simuler les régimes hydrauliques, puis tester des variantes de régulation thermostatique. Cette valeur est celle du modèle simplifié, sous ses hypothèses de calcul.</p>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Livrables</p>
+            <p>Les scripts MATLAB, le rapport de modélisation et les figures de simulation documentent les hypothèses et les variantes. Des éléments complémentaires peuvent être transmis sur demande par e-mail.</p>
+            <a class="button button-dark" href="mailto:imran.fagbemi@edu.esiee.fr?subject=Demande%20de%20d%C3%A9tails%20sur%20la%20simulation%20du%20r%C3%A9seau%20de%20chaleur">Demander les détails du projet <span aria-hidden="true">↗</span></a>
+          </section>
+        </div>
+        <aside class="project-aside">
+          <div class="aside-card"><span>Cadre</span><strong>Exercice de modélisation thermique · MATLAB</strong></div>
+          <div class="aside-card"><span>Thèmes</span><strong>Réseau de chaleur · loi d’eau · plancher chauffant · inertie</strong></div>
+          <div class="aside-card"><span>Contributions</span><strong>Modèle horaire · analyses de sensibilité · variantes de régulation</strong></div>
+          <div class="aside-card"><span>Livrables</span><strong>Scripts MATLAB · rapport · figures de simulation</strong></div>
+          <a class="aside-card aside-link" href="#photos"><span>Photos</span><strong>Courbe annuelle de puissance du modèle</strong></a>
+        </aside>
+      </section>
+    </main>
+    <footer class="site-footer section-wrap"><span>© 2026 Imran Fagbemi</span><a href="../index.html#projets">Tous les projets ↑</a><span><a href="../index.html#contact">Me contacter</a></span></footer>
+  </body>
+</html>

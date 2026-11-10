@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Étude PVsyst d’une installation photovoltaïque : dimensionnement, ombrages et autoconsommation.">
+    <title>Étude photovoltaïque et autoconsommation — Imran Fagbemi</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="../index.html" aria-label="Retour à l’accueil">IF<span>.</span></a>
+      <a class="header-focus" href="../index.html#contact">Stage EnR · 6 mois · février 2027</a>
+      <nav aria-label="Navigation principale"><a href="../index.html#a-propos">À propos</a><a href="../index.html#projets">Projets</a><a href="../index.html#parcours">Parcours</a><a href="../index.html#engagements">Engagements</a><a href="../index.html#contact">Contact</a></nav>
+      <a class="header-cta" href="../CV_Fagbemi_Imran_2027.pdf" target="_blank" rel="noreferrer">Voir mon CV <span aria-hidden="true">↗</span></a>
+    </header>
+    <main>
+      <section class="project-hero section-wrap">
+        <a class="back-link" href="../index.html#projets">← Retour aux projets</a>
+        <p class="eyebrow">Étude photovoltaïque · toiture agricole à Carpentras</p>
+        <h1>Dimensionnement PVsyst et étude d’ombrages <span>pour toiture agricole.</span></h1>
+        <p class="project-lead">Étude de cours sur une toiture agricole à Carpentras : quelle production peut-on attendre d’une installation photovoltaïque, et dans quelle mesure les ombrages et le profil de consommation changent-ils son intérêt&nbsp;?</p>
+        <figure class="project-image project-image-contained" id="photos">
+          <img src="../assets/bilan-pv.png" alt="Diagramme PVsyst des pertes de production photovoltaïque">
+          <figcaption>Diagramme de pertes produit pendant l’étude PVsyst.</figcaption>
+        </figure>
+      </section>
+      <section class="section-wrap project-body">
+        <div class="project-main">
+          <section class="project-section">
+            <p class="eyebrow">Pourquoi cette étude ?</p>
+            <h2>La surface disponible ne suffit pas à estimer l’énergie réellement utile</h2>
+            <p>Le travail pratique portait sur une ferme située à Carpentras, avec une toiture quasi orientée au sud, inclinée à 25° et d’environ 156 m². L’enjeu était de vérifier le dimensionnement envisageable, puis de comprendre comment l’horizon et les arbres proches influencent la production.</p>
+            <p>Une seconde question concernait l’usage de cette énergie : une installation bien dimensionnée ne garantit pas que sa production coïncide avec la consommation annuelle de 4 500 kWh prise comme référence.</p>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Démarche</p>
+            <h2>Comparer les masques solaires et les configurations électriques</h2>
+            <p>J’ai modélisé le champ photovoltaïque et son environnement dans PVsyst, puis distingué les pertes d’irradiance dues aux ombres des pertes électriques associées au câblage des modules.</p>
+            <ul class="detail-list">
+              <li>Comparaison de configurations de 48 modules, de 14,4 à 15,8 kWc, avec différentes solutions de conversion.</li>
+              <li>Modélisation de l’horizon et des arbres proches pour évaluer les masques solaires.</li>
+              <li>Comparaison des pertes d’irradiance et des pertes électriques liées aux chaînes de modules.</li>
+              <li>Confrontation de la production horaire à un profil de consommation annuel de 4 500 kWh.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Résultats notables</p>
+            <h2>Les ombrages proches peuvent pénaliser davantage que l’horizon</h2>
+            <div class="result-banner"><strong>24,6 contre 24,9 MWh/an</strong><span>production simulée avec l’horizon lointain, comparée au cas sans masque</span></div>
+            <p>Avec l’horizon lointain, la production simulée passe de 24,9 à 24,6 MWh/an, soit une baisse d’environ 1,2 %. Dans un autre scénario, avec onduleur central et ombrages proches, les pertes électriques liées aux chaînes de modules atteignent 31,8 % : une perte de production bien supérieure à la perte d’irradiance de 9,4 %.</p>
+            <p>Ces deux résultats correspondent à des configurations distinctes. Dans le scénario avec onduleur central, sur 14 949 kWh/an produits, 1 959 kWh sont consommés directement sur place. Cela correspond à 13,1 % d’autoconsommation de la production et à 43,5 % d’autoproduction des besoins annuels.</p>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Livrables</p>
+            <p>Le rapport présente le dimensionnement, les variantes étudiées, les pertes simulées et l’analyse d’autoconsommation. Il peut être transmis sur demande par e-mail.</p>
+            <a class="button button-dark" href="mailto:imran.fagbemi@edu.esiee.fr?subject=Demande%20du%20rapport%20de%20l%E2%80%99%C3%A9tude%20photovolta%C3%AFque&body=Bonjour%2C%0A%0AJe%20souhaiterais%20consulter%20le%20rapport%20de%20l%E2%80%99%C3%A9tude%20photovolta%C3%AFque%20et%20autoconsommation.%0A">Demander le rapport par e-mail</a>
+          </section>
+        </div>
+        <aside class="project-aside">
+          <div class="aside-card"><span>Cadre</span><strong>Travail pratique · PVsyst · ferme à Carpentras</strong></div>
+          <div class="aside-card"><span>Thèmes</span><strong>Dimensionnement PV · masques solaires · autoconsommation</strong></div>
+          <div class="aside-card"><span>Contributions</span><strong>Configurations comparées · ombrages modélisés · profils mis en regard</strong></div>
+          <div class="aside-card"><span>Livrables</span><strong>Rapport d’étude détaillé, disponible sur demande</strong></div>
+          <a class="aside-card aside-link" href="#photos"><span>Photos</span><strong>Diagramme de pertes PVsyst</strong></a>
+        </aside>
+      </section>
+    </main>
+    <footer class="site-footer section-wrap"><span>© 2026 Imran Fagbemi</span><a href="../index.html#projets">Tous les projets ↑</a><span><a href="../index.html#contact">Me contacter</a></span></footer>
+  </body>
+</html>
