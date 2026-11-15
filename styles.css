@@ -679,6 +679,10 @@ h1 {
   grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1fr);
 }
 
+.engagements .engagement-card + .engagement-card {
+  margin-top: 14px;
+}
+
 .hobby-line {
   display: flex;
   flex-wrap: wrap;
@@ -963,6 +967,17 @@ h1 {
   color: #424e45;
   font-size: 15px;
   line-height: 1.5;
+}
+
+/* Figure double partageant une légende commune */
+.project-gallery .figure-duo {
+  grid-column: span 2;
+}
+
+.figure-duo-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .result-banner {
@@ -1379,8 +1394,13 @@ h1 {
     padding-bottom: 23px;
   }
 
-  .project-gallery {
+  .project-gallery,
+  .figure-duo-images {
     grid-template-columns: 1fr;
+  }
+
+  .project-gallery .figure-duo {
+    grid-column: span 1;
   }
 
   .project-gallery img {

@@ -57,7 +57,7 @@
         <div class="about-copy">
           <p>I grew up in Cotonou, Benin, for ten years. The challenges of sustainable cities, clean electrification and energy sovereignty are tangible there. This experience led me towards the energy transition.</p>
           <p>I hope to work on projects in France and Europe as well as in West Africa. Access to energy and mini-grids particularly interest me, alongside renewable generation and transport decarbonisation projects in France.</p>
-          <p>I am looking for a role combining studies and modelling—sizing, simulation and analysis—with project development and engagement with local stakeholders. Solar PV, storage and mini-grids are central to these interests.</p>
+          <p>I am looking for a role combining studies and modelling (sizing, simulation and analysis) with project development and engagement with local stakeholders. Solar PV, storage and mini-grids are central to these interests.</p>
         </div>
       </section>
 
@@ -176,9 +176,33 @@
           </div>
         </section>
 
+        <section class="project-group" aria-labelledby="building-heading">
+          <div class="group-heading">
+            <h3 id="building-heading">Buildings and energy efficiency</h3>
+            <p>Dynamic thermal simulation and regulatory calculations for a detached house.</p>
+          </div>
+          <div class="project-grid">
+            <a class="project-card text-project building-card-compact" href="projects/maison-energie.html">
+              <img src="assets/maison-modele.png" alt="3D view of the house modelled in Pléiades" width="980" height="540" loading="lazy">
+              <p class="project-context">Dynamic thermal simulation · Pléiades</p>
+              <h4>Improving a house’s thermal model</h4>
+              <p>I studied how occupancy, ventilation and shading scenarios affect heating demand and thermal comfort.</p>
+              <span class="project-link">Explore the method and visuals <span aria-hidden="true">↗</span></span>
+            </a>
+
+            <a class="project-card text-project building-card-compact" href="projects/calcul-reglementaire-rt2012.html">
+              <img src="assets/rt2012-maison.png" alt="RT2012 regulatory thermal modelling of the detached house in Pléiades" width="980" height="540" loading="lazy">
+              <p class="project-context">RT2012 regulatory calculation · Pléiades</p>
+              <h4>Bringing a house into thermal compliance</h4>
+              <p>I modelled and sized the envelope and systems of a new detached house (131.20 m² SRT) to meet RT2012 thresholds.</p>
+              <span class="project-link">Explore the method and results <span aria-hidden="true">↗</span></span>
+            </a>
+          </div>
+        </section>
+
         <section class="project-group" aria-labelledby="entrepreneurship-heading">
           <div class="group-heading">
-            <h3 id="entrepreneurship-heading">Entrepreneurship and energy data</h3>
+            <h3 id="entrepreneurship-heading">Entrepreneurship</h3>
             <p>Market research, business modelling and open-data analysis.</p>
           </div>
           <div class="project-grid">
@@ -196,22 +220,6 @@
             </article>
           </div>
         </section>
-
-        <section class="project-group" aria-labelledby="building-heading">
-          <div class="group-heading">
-            <h3 id="building-heading">Buildings and energy efficiency</h3>
-            <p>Thermal modelling and comfort analysis for a house.</p>
-          </div>
-          <a class="project-card building-project" href="projects/maison-energie.html">
-            <img src="assets/maison-modele.png" alt="3D view of the house modelled in Pléiades" width="980" height="540" loading="lazy">
-            <div>
-              <p class="project-context">Building energy modelling · Pléiades</p>
-              <h4>Improving a building thermal model</h4>
-              <p>I studied how occupancy, ventilation and shading scenarios affect heating demand and thermal comfort.</p>
-              <span class="project-link">Explore the method and visuals <span aria-hidden="true">↗</span></span>
-            </div>
-          </a>
-        </section>
       </section>
 
       <section class="engagements section-space" id="engagements">
@@ -219,13 +227,13 @@
           <div><h2>Engagements and interests</h2></div>
         </div>
         <a class="project-card engagement-card" href="projects/ganvie.html">
-          <img src="assets/evolution-crue-ganvie.png" alt="Water level recorded at Ladji in 2018 during Lake Nokoué's flood season" width="1167" height="876" loading="lazy">
+          <img src="assets/photo_groupe_finale_cgenial_2019.jpeg" alt="Water level recorded at Ladji in 2018 during Lake Nokoué’s flood season" width="1167" height="876" loading="lazy">
           <div>
-            <p class="project-context">CGénial 2019 competition · EFE Montaigne · supported by IRD</p>
-            <h3>Exploring environmental solutions for Ganvié</h3>
-            <p>A collaborative science and engineering project: interviews with local residents, analysis of flood and salinity data, and adaptation concepts for a lakeside community.</p>
-            <span class="project-result engagement-result"><span class="project-result-label">National and international competition</span><strong>Winner of the “international projects” stage</strong><span>Finalist at the national final at the Cité des sciences et de l’industrie</span></span>
-            <span class="project-link">Discover the research, fieldwork and design ideas <span aria-hidden="true">↗</span></span>
+            <p class="project-context">CGénial 2019 competition · EFE Montaigne · Partners: IRD &amp; Green Keeper Africa</p>
+            <h3>Environmental engineering for the lake village of Ganvié</h3>
+            <p>Project carried out in a four-team structure, from field surveys to prototyping: flood and salinity analysis, phytoremediation, water hyacinth valorisation and floating gardens.</p>
+            <p class="project-award">Winner of the “international projects” stage and national finalist in Paris.</p>
+            <span class="project-link">See the study, fieldwork and prototypes <span aria-hidden="true">↗</span></span>
           </div>
         </a>
         <p class="hobby-line"><strong>Basketball</strong></p>
@@ -283,7 +291,7 @@
 
         const SENSITIVITY = 0.08;
         const DAMPING = 0.945;
-        const MAX_VELOCITY = 16;
+        const MAX_VELOCITY = 19;
 
         function updatePosition() {
           const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
