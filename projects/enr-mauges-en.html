@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Team study of renewable energy expansion scenarios in Mauges Communauté with an interactive hourly grid-integration simulator.">
+    <title>Renewable energy in Mauges Communauté — Imran Fagbemi</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="../index-en.html" aria-label="Back to home">IF<span>.</span></a>
+      <a class="header-focus" href="../index-en.html#contact">Renewables Internship · 6 mos · Feb 2027</a>
+      <nav aria-label="Main navigation">
+        <a href="../index-en.html#about">About</a>
+        <a href="../index-en.html#background">Background</a>
+        <a href="../index-en.html#projects">Projects</a>
+        <a href="../index-en.html#engagements">Engagements</a>
+        <a href="../index-en.html#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="../CV_Fagbemi_Imran_2027.pdf" target="_blank" rel="noreferrer">View CV <span aria-hidden="true">↗</span></a>
+      <nav class="language-switch" aria-label="Language">
+        <a href="enr-mauges.html" lang="fr" hreflang="fr">FR</a>
+        <span aria-current="page">EN</span>
+      </nav>
+    </header>
+    <main>
+      <section class="project-hero section-wrap">
+        <a class="back-link" href="../index-en.html#projects">← Back to projects</a>
+        <p class="eyebrow">ESIEE Paris × Sopra Steria · Team of three · 2026</p>
+        <h1>Five-year hourly demand coverage and grid constraint analysis <span>in Mauges Communauté.</span></h1>
+        <p class="project-lead">Capstone project sponsored by Sopra Steria: how far can solar PV and wind capacity expand in Mauges Communauté without breaching grid hosting limits or incurring excessive curtailment?</p>
+      </section>
+
+      <section class="section-wrap project-body">
+        <div class="project-main">
+          <section class="project-section">
+            <p class="eyebrow">Why this study?</p>
+            <h2>Matching renewable generation and demand hour by hour</h2>
+            <p>Mauges Communauté hosts 232 MW of wind and solar PV capacity, generating an annual volume equivalent to roughly 42% of local electricity consumption. However, annual energy balance masks hourly mismatches—raising critical questions around surplus generation, curtailment, and distribution substation hosting capacity.</p>
+            <p>Proposed by Sopra Steria within its smart grids and energy storage practice, the brief required evaluating expansion pathways and quantifying flexibility levers. Our three-student team modelled five full years of operation (2021–2025).</p>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Methodology</p>
+            <h2>Reconstructing hourly profiles and comparing pathways</h2>
+            <p>Public datasets at the inter-municipal scale did not directly provide complete hourly time series. We reconstructed hourly load, generation, and weather profiles to simulate system behaviour across every hour of the five-year period.</p>
+            <p>Our interactive web simulator lets users adjust installed PV/wind capacities, load assumptions, and demand-response levers. While reconstructed demand profiles illuminate system-level trajectories, they complement—rather than replace—detailed substation connection studies.</p>
+            <ul class="detail-list">
+              <li>Reconstructed and validated hourly time series spanning 43,824 hours (2021–2025).</li>
+              <li>Benchmarked multiple solar PV and wind capacity expansion scenarios.</li>
+              <li>Modelled demand-side flexibility by shifting domestic hot-water tank heating to solar peak hours.</li>
+              <li>Enforced a 5% annual curtailment cap and assessed primary substation hosting capacities.</li>
+            </ul>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Key outcome</p>
+            <h2>Higher hourly coverage without utility-scale battery storage</h2>
+            <div class="result-banner"><strong>41.6% → 55.4%</strong><span>simulated hourly electricity demand covered under the recommended pathway</span></div>
+            <p>Our recommended roadmap pairs a +25% increase in solar PV and +50% in wind capacity with midday load shifting for domestic water heaters. In our simulation, this strategy raises hourly demand coverage to 55.4% without electrochemical storage while keeping curtailment below the 5% threshold in each of the five years analysed.</p>
+            <p>Achieving this trajectory requires siting new projects on primary substations with remaining hosting headroom, within the modelling assumptions used to reconstruct local hourly demand.</p>
+          </section>
+          <section class="project-section">
+            <p class="eyebrow">Deliverables</p>
+            <h2>A technical report and an open web simulator</h2>
+            <p>The report documents input datasets, reconstruction methods, scenario trade-offs, and our final recommendations. The public web simulator allows stakeholders to test parameters interactively.</p>
+            <div class="action-row">
+              <a class="button button-dark" href="https://yalliee.github.io/simulateur-integration-enr-mauges-communaute/maquette_quetinn.html" target="_blank" rel="noreferrer">Launch the simulator <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="mailto:imran.fagbemi@edu.esiee.fr?subject=Request%20for%20the%20Mauges%20Communaut%C3%A9%20renewable%20energy%20report">Request the report via email</a>
+            </div>
+          </section>
+        </div>
+        <aside class="project-aside">
+          <div class="aside-card"><span>Context</span><strong>Team project · ESIEE Paris × Sopra Steria · 2026</strong></div>
+          <div class="aside-card"><span>Focus areas</span><strong>Solar PV · wind · demand flexibility · power grids</strong></div>
+          <div class="aside-card"><span>Team scope</span><strong>Time-series reconstruction · scenario modelling · web simulator</strong></div>
+          <div class="aside-card"><span>Deliverables</span><strong>Technical report · public web simulator</strong></div>
+          <div class="aside-card"><span>Media</span><strong>No field photos published for this desk study</strong></div>
+        </aside>
+      </section>
+    </main>
+    <footer class="site-footer section-wrap"><span>© 2026 Imran Fagbemi</span><a href="../index-en.html#projects">All projects ↑</a><span><a href="../index-en.html#contact">Contact me</a></span></footer>
+  </body>
+</html>
