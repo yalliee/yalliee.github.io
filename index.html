@@ -115,27 +115,44 @@
             <span>Consulter le socle de compétences techniques &amp; logiciels</span>
             <span class="skills-toggle-icon" aria-hidden="true"></span>
           </summary>
-          <div class="skills-grid">
-            <article class="skill-card">
-              <h3>Simulation et calcul</h3>
-              <p>MATLAB · Simulink · Python</p>
-            </article>
-            <article class="skill-card">
-              <h3>Énergie solaire</h3>
-              <p>PVsyst · dimensionnement · autoconsommation · récupération d’énergie</p>
-            </article>
-            <article class="skill-card">
-              <h3>Bâtiment</h3>
-              <p>Pléiades · simulation thermique dynamique</p>
-            </article>
-            <article class="skill-card">
-              <h3>Systèmes embarqués sobres</h3>
-              <p>ESP32 · Arduino/C++ · afficheurs e-paper · gestion basse consommation · sobriété matérielle</p>
-            </article>
-            <article class="skill-card">
-              <h3>Documentation technique</h3>
-              <p>LaTeX · rédaction technique en français</p>
-            </article>
+          <div class="skills-panel">
+            <div class="skills-grid">
+              <article class="skill-card">
+                <div>
+                  <h3>Énergies renouvelables</h3>
+                  <p class="skill-domains">Production d’énergie (photovoltaïque, éolien, hydraulique), réseaux de distribution (électricité, gaz, chaleur, froid), stockage d’énergie BESS, systèmes et moteurs électriques, récupération PV et IoT low power</p>
+                </div>
+                <p class="skill-tools"><span class="skill-tools-label">Logiciels :</span> PVsyst</p>
+              </article>
+              <article class="skill-card">
+                <div>
+                  <h3>Efficacité énergétique et décarbonation</h3>
+                  <p class="skill-domains">Énergie thermique, construction et villes durables, diagnostic énergétique, certifications énergétiques et environnementales (CEE), analyse de cycle de vie (ACV)</p>
+                </div>
+                <p class="skill-tools"><span class="skill-tools-label">Logiciels :</span> Pléiades (Modeleur, Éditeur, ACV)</p>
+              </article>
+              <article class="skill-card">
+                <div>
+                  <h3>Ingénierie d’affaires</h3>
+                  <p class="skill-domains">Étude de marché, appels d’offres, cahiers des charges, dossiers technico-économiques, cadrage et planning</p>
+                </div>
+                <p class="skill-tools"><span class="skill-tools-label">Logiciels :</span> Suite Office : Excel, Word, Teams</p>
+              </article>
+              <article class="skill-card">
+                <div>
+                  <h3>Données et programmation</h3>
+                  <p class="skill-domains">Analyse de données énergétiques et environnementales, modélisation numérique (CFD, STS, STD, SED, multiphysique), électronique embarquée</p>
+                </div>
+                <p class="skill-tools"><span class="skill-tools-label">Langages :</span> Python · MATLAB · C/C++ · SQL </p>
+              </article>
+              <article class="skill-card skill-card-wide">
+                <div>
+                  <h3>Langues et communication</h3>
+                  <p class="skill-domains"> Pitchs, présentations, discours, cours particuliers et vulgarisation</p>
+                </div>
+                <p class="skill-tools"><span class="skill-tools-label">Langues :</span> Anglais C1 (TOEIC 940/990), Français C1 (Certificat Voltaire 816)</p>
+              </article>
+            </div>
           </div>
         </details>
       </section>
@@ -378,6 +395,106 @@
         requestAnimationFrame(animate);
       })();
     </script>
+
+    <script>
+      (() => {
+        const details = document.getElementById('competences');
+        if (!details) return;
+        const summary = details.querySelector('summary');
+        const panel = details.querySelector('.skills-panel');
+        if (!summary || !panel) return;
+
+        let currentAnim = null;
+        let state = details.open ? 'open' : 'closed';
+
+        if (details.open) {
+          details.classList.add('is-open');
+        }
+
+        const prefersReduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function finish(openState) {
+          currentAnim = null;
+          state = openState ? 'open' : 'closed';
+          details.open = openState;
+          details.classList.toggle('is-open', openState);
+          panel.style.height = '';
+          panel.style.opacity = '';
+          panel.style.overflow = '';
+        }
+
+        function expand() {
+          if (currentAnim) currentAnim.cancel();
+          state = 'expanding';
+          details.classList.add('is-open');
+
+          const startHeight = details.open ? panel.offsetHeight : 0;
+          const startOpacity = details.open ? parseFloat(getComputedStyle(panel).opacity) || 1 : 0;
+
+          details.open = true;
+          panel.style.overflow = 'hidden';
+          const endHeight = panel.scrollHeight;
+
+          if (prefersReduced()) {
+            finish(true);
+            return;
+          }
+
+          currentAnim = panel.animate(
+            [
+              { height: `${startHeight}px`, opacity: startOpacity },
+              { height: `${endHeight}px`, opacity: 1 }
+            ],
+            {
+              duration: 240,
+              easing: 'cubic-bezier(0.22, 1, 0.36, 1)'
+            }
+          );
+
+          currentAnim.onfinish = () => finish(true);
+          currentAnim.oncancel = () => { currentAnim = null; };
+        }
+
+        function collapse() {
+          if (currentAnim) currentAnim.cancel();
+          state = 'closing';
+          details.classList.remove('is-open');
+
+          const startHeight = panel.offsetHeight;
+          const startOpacity = parseFloat(getComputedStyle(panel).opacity) || 1;
+          panel.style.overflow = 'hidden';
+
+          if (prefersReduced()) {
+            finish(false);
+            return;
+          }
+
+          currentAnim = panel.animate(
+            [
+              { height: `${startHeight}px`, opacity: startOpacity },
+              { height: '0px', opacity: 0 }
+            ],
+            {
+              duration: 200,
+              easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+            }
+          );
+
+          currentAnim.onfinish = () => finish(false);
+          currentAnim.oncancel = () => { currentAnim = null; };
+        }
+
+        summary.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (state === 'closed' || state === 'closing') {
+            expand();
+          } else {
+            collapse();
+          }
+        });
+      })();
+    </script>
+	
 	<script data-goatcounter="https://imran-fagbemi.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js">
 	</script>
